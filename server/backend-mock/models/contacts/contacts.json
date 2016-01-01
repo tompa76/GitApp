@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "name": "Tomas",
+    "surname": "Olsson",
+    "tel_mobile": "070-313 29 50",
+    "mail": "tompa.r.olsson@gmail.com"
+  },
+  {
+    "id": 2,
+    "name": "Sara",
+    "surname": "Wahlberg",
+    "tel_mobile": "070-688 19 76",
+    "mail": "sara.c.wahlberg@hotmail.com"
+  },
+  {
+    "id": 3,
+    "name": "Albin",
+    "surname": "Wahlberg",
+    "tel_mobile": "076-102 03 73"
+  },
+  {
+    "id": 4,
+    "name": "Rasmus",
+    "surname": "Wahlberg"
+  }
+]

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+</head>
+<body>
+<form class="form-horizontal">
+  <div class="form-group warning">
+    <label class="control-label" for="inputWarning">Input with warning</label>
+    <div class="controls">
+      <input type="text" id="inputWarning">
+      <span class="help-inline">Something may have gone wrong</span>
+    </div>
+  </div>
+  <div class="control-group error">
+    <label class="control-label" for="inputError">Input with error</label>
+    <div class="controls">
+      <input type="text" id="inputError">
+      <span class="help-inline">Please correct the error</span>
+    </div>
+  </div>
+  <div class="control-group info">
+    <label class="control-label" for="inputInfo">Input with info</label>
+    <div class="controls">
+      <input type="text" id="inputInfo">
+      <span class="help-inline">Username is taken</span>
+    </div>
+  </div>
+  <div class="control-group success">
+    <label class="control-label" for="inputSuccess">Input with success</label>
+    <div class="controls">
+      <input type="text" id="inputSuccess">
+      <span class="help-inline">Woohoo!</span>
+    </div>
+  </div>
+</form>
+<section id="contact-details" class="container">
+  <p>Contact Details</p>
+
+  <form name="contactDetailsController.contactForm" novalidate>
+    <div class="form-group has-error">
+      <label for="name">Förnamn</label>
+      <input type="text"
+             class="form-control"
+             ng-class="'has-error: contactDetailsController.contactForm.name.$error'"
+             id="name"
+             name="name"
+             ng-model="contactDetailsController.contact.name"
+             ng-required="true"
+             placeholder="Ange ditt förnamn">
+    </div>
+    <div class="form-group">
+      <label for="surname">Efternamn</label>
+      <input type="text"
+             class="form-control"
+             id="surname"
+             ng-model="contactDetailsController.contact.surname"
+             ng-required="true"
+             placeholder="Ange ditt efternamn">
+    </div>
+    <div class="form-group">
+      <label for="tel_mobile">Telefon</label>
+      <input type="text"
+             class="form-control"
+             id="tel_mobile"
+             ng-model="contactDetailsController.contact.tel_mobile"
+             placeholder="Ange ditt mobilnummer">
+    </div>
+    <div class="control-group has-warning">
+      <label class="control-label" for="email">Epost</label>
+      <div class="controls">
+        <input type="email"
+               class="form-control"
+               id="email"
+               name="email"
+               ng-model="contactDetailsController.contact.email"
+               placeholder="Ange din e-post adress">
+        <span ng-show="contactDetailsController.contactForm.email.$error.email">Felaktigt angiven epost-address</span>
+      </div>
+    </div>
+    <p>blaha</p>
+    <button type="submit"
+            class="btn btn-primary"
+            ng-disabled="contactDetailsController.contactForm.$invalid"
+            ng-click="contactDetailsController.save()">Spara</button>
+    <button class="btn btn-default"
+            ng-click="contactDetailsController.cancel()">Tillbaka</button>
+    Hello{{contactDetailsController.contactForm.name.$error.name}}
+  </form>
+</section>
+
+</body>
+</html>
